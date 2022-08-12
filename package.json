@@ -2,12 +2,12 @@
   "name": "music-caterlouge",
   "version": "1.0.0",
   "description": "itunes music search",
-  "main": "index.js",
+  "main": "server.js",
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build--prefix frontend "
+    "start": "node.server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend "
 
   },
   "author": "Fiona",

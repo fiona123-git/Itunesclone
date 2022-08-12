@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 4000
 const axios = require('axios')
-
+const path = require('path')
 
 app.get('/api/:searchTerm/:mediaType', (req, res) => {
     let searchTerm = req.params.searchTerm
@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+//app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 
 
