@@ -3,7 +3,7 @@ const app = express()
 const port = 4000
 const axios = require('axios')
 const path = require('path')
-//const helmet = require("helmet");
+const helmet = require("helmet");
 
 
 app.get('/api/:searchTerm/:mediaType', (req, res) => {
@@ -48,7 +48,7 @@ app.get('/api/:searchTerm/:mediaType', (req, res) => {
 })
 
 
-if (process.env.NODE_ENV === 'production') {
+/*if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'frontend/build')));
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname,
@@ -56,8 +56,19 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-//app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, 'frontend/build'))); */
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+    app.get('*', (req, res) =>
+        res.sendFile(
+            path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
+        )
+    );
+} else {
+    app.get('/', (req, res) => res.send('Please set to production'));
+}
 
 
 
