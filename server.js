@@ -3,6 +3,8 @@ const app = express()
 const port = 4000
 const axios = require('axios')
 const path = require('path')
+const helmet = require("helmet");
+
 
 app.get('/api/:searchTerm/:mediaType', (req, res) => {
     let searchTerm = req.params.searchTerm
@@ -20,6 +22,28 @@ app.get('/api/:searchTerm/:mediaType', (req, res) => {
             console.log(error);
 
         })
+
+
+        // this end point is for testing purpose only as there isnt a frontend to specify the parameters and the variables was hard coded
+        app.get('/apiTest/', (req, res) => {
+            let searchTerm = 'hammer'
+            let mediaType = 'movie'
+            console.debug(searchTerm)
+            console.debug(mediaType)
+            axios.get(`https://itunes.apple.com/search?term=${searchTerm}&media=${mediaType}`)
+                .then(function (response) {
+                    // handle success
+                    console.log(response);
+                    res.json(response.data)
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+
+                })
+
+        })
+
         
 })
 

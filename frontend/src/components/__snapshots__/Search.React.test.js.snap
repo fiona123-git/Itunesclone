@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<link
+  to="/search"
+>
+  <div
+    className="main"
+  >
+    <input
+      className="inp-field"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+      value=""
+    />
+    <select
+      className="inp-field"
+      name="choice"
+      onChange={[Function]}
+    >
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="music"
+      >
+        Music
+      </option>
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="movie"
+      >
+        movie
+      </option>
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="musicVideo"
+      >
+        musicVideo
+      </option>
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="podcast"
+      >
+        Podcast
+      </option>
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="audiobook"
+      >
+        audiobook
+      </option>
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="shortFilm"
+      >
+        shortFilm
+      </option>
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="tvShow"
+      >
+        tvShow
+      </option>
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="software"
+      >
+        software
+      </option>
+      <option
+        name="choice"
+        onChange={[Function]}
+        value="all"
+      >
+        all
+      </option>
+    </select>
+    <input
+      className="inp-field btn"
+      onClick={[Function]}
+      type="button"
+      value="Search"
+    />
+    <table
+      className="center"
+    >
+      <tbody />
+    </table>
+  </div>
+  search
+</link>
+`;
